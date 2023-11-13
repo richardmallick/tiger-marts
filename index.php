@@ -119,7 +119,7 @@ function save_contact_data( $post_id ) {
 	}
 
 	// Email Address.
-	$email_address = isset( $_POST['tiger-mart-custom-email'] ) ? sanitize_email( $_POST['tiger-mart-custom-email'] ) : '';
+	$email_address = isset( $_POST['tiger-mart-custom-email'] ) ? sanitize_text_field( $_POST['tiger-mart-custom-email'] ) : '';
 	if ( isset( $email_address ) ) {
 		update_post_meta( $post_id, 'tiger_mart_custom_email', $email_address );
 	} else {
